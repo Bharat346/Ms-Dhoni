@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page title</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.2.css">
+  </head>
+  <style>
+      *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:radial-gradient(pink, #3115ff);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{ 
+    list-style: none;
+    padding: 5px;
+    margin: auto;
+    position: relative;
+    top:10vh;
+    border: 2px solid blueviolet;
+  
+}
+ li:hover{
+     background-color:red;
+ }
+.n1{
+    width: 100%;
+    height: 30vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5DutxX9GJaWKLkRGf5Ab-Y94ThENEevn6EA&usqp=CAU');
+    background-size: cover;
+    animation:opac 4s linear infinite;
+    
+    
+}
+box{
+    position: absolute;
+    width: 48vw;
+    height:200px;
+    perspective: 1000px;
+}
+.container{
+ position: absolute;
+  width :48vw;
+  height:200px;
+  backface-visibility: hidden;
+ 
+  transition: transform 0.6s; transform-style: preserve-3d; 
+  
+}
+
+.c1{
+  position: absolute;
+  background:radial-gradient(#a400ff,#11ff00);
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border:2px solid aquamarine;
+}
+
+.c2 {
+  position: absolute;
+  background:radial-gradient(#a400ff,#11ff00);
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border:2px solid aquamarine;
+}
+.c2{
+     transform: rotateY(180deg);
+}
+
+.box:hover .container{
+ transform:rotateY(180deg);
+  
+  }
+
+
+
+.c1 h2{
+    color: black;
+    font-size:20px;
+    position: relative;
+    top: 60px;
+    align-items: center;
+}
+.c1 p{
+    width:6vw ;
+    height:6vw;
+    border: 2px solid white;
+    border-radius: 200px;
+    background-color:red;
+    color: white;
+    font-size:17px;
+    align-items: center;
+}
+.c2 h2{
+    color: #11ff00;
+    font-family:cyrillic serif;
+}
+.c2 i{
+    position:relative;
+    top: 15vw;
+ }
+.box2 {
+  width:48vw;
+  height: 200px;
+  
+}
+
+.container2 {
+  width: 48vw;
+  height: 200px;
+ position: relative;
+  left:50.4vw;
+  
+  display:hidden;
+  transform-style: preserve-3d;
+  transition-duration: 1s;
+  margin-left: 2px;
+  
+}
+.c1 h3{
+    color: black;
+    font-size:20px;
+    position: relative;
+    top: 33px;
+}
+
+
+.box2:hover .container2{
+ transform: rotateY(180deg);
+  }
+  
+  #color{
+      width:45vw;
+      height:15vw;
+      position:relative;
+      top: 50px;
+  }
+  
+ .btn{
+     position:relative;
+      top: 50px;
+      
+ }
+ .btn:hover{
+     background-color: red ;
+ }
+
+ .d1{
+     display: flex;
+ }
+ .d2{
+     width:50vw;
+     margin-left: 5px;
+ }
+ .img3{
+     border-radius: 200px;
+ }
+ .nav2{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+.btn1{
+    border: 2px solid pink;
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+.bharat{
+    display: flex;
+}
+.ms{
+ display: flex;
+    display: none ;
+ }
+ .photo{
+   background: radial-gradient(#5000ff, black);
+    display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+
+
+.p0,.p1,.p2,.p3,.p4,.p5,.p6{
+  display:flex;
+  width: 100%;
+  margin:10px;
+     padding: 10px;
+}
+.ms ,.table{
+    pposition: relative;
+    left: 100px;
+    background:radial-gradient(#2babff, black);
+    
+}
+.red{
+    
+    background-color: red;
+    color: black;
+    
+}
+.dhoni{
+  display: flex;
+  display: none;
+  
+ }
+  </style>
+<body>
+    <header>
+        
+        <nav class="n1">
+            <ul>
+               <img width="35vw" height="35vw" class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg43FQ5rHhBPvAkirFl8kdtAtsz4nPAfrv9A&usqp=CAU" alt="logo"></img>
+                <li ><a href="#home"class="navlinks" onclick="toggleAudio()">play-1</a></li>
+                <li class="navlinks"><a onclick="toggleAudio2()" href="#about">play-2</a></li>
+                <li class="navlinks"><a onclick="toggleAudio3()" href="#contact">play-3</a></li>
+                
+                
+                
+                
+                    
+                </nav>
+            </ul>
+            
+            <audio id="myAudio2">
+  <source src="dhoni speech(2).aac" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio  id="myAudio3">
+  <source src="jab tak.mp3(2).aac" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+    
+    </header>
+     <div class="bb">
+    <div class="box">
+    <div class="container"  >
+   <div class="c1"> 
+       <p> 1 </p>
+  <h2>On which this website dedicated ,
+       that name is:</h2> 
+       </div>
+  <div class="c2" >
+         <h2>MS DHONI</h2>
+         <i>process is most important than result  </i>
+         <i>... ms dhoni</i>
+  </div>
+        </div>
+        </div>
+       <div class="box2">
+           <div class="container2">
+               <span class="c1">
+               <p> 2 </p><br>
+  <h3>if you want to change background color</h3> </span>
+               <span class="c2">
+                   <input type="color"  id="color"></input>
+  <button onclick="z()" class="btn">change background </button>
+               </span>
+               
+           </div>
+       </div>
+       </div>
+       <br>
+      <i><b class="legend"> <marquee style="behavior:left;background-color:#ff0073;">MS DHONI The Legend</marquee></b></i>
+       <p> Now we talk about the legend ms dhoni.</p>
+       <br>
+       <div class="d1">
+       
+       <i class="d2">   Mahendra Singh Dhoni, born 7 July 1981) is an Indian professional cricketer. He was captain of the Indian national team in limited-overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. </i>
+       <img width="200px" height="200px"class="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz3Upn1I7kOQmSsahA_dSukffl51A8Bv68zw&usqp=CAU" alt="">
+        </div>
+        <br>
+        <i>Dhoni is widely considered one of the greatest cricket captains, wicket-keeper-batsman and finishers in the history of cricket. He plays as a right-handed wicket-keeper-batsman and is known for his calm captaincy and his ability to finish matches in tight situations. He is also the current captain of Chennai Super Kings in the Indian Premier League. <i>
+<br>
+<br>
+<hr>
+<div class="menu" id=" #home" link="#home">
+   <div class="bharat">
+    <button onclick="hide()" class="btn1">1</button>
+     <h2  onclick="display()"  
+ >personal life &#187;</h2> </div>
+      
+          <hr>
+          <div class="ms" id="ms">
+    <i >
+        Dhoni was born in Ranchi, Bihar (now in Jharkhand) and hails from a Hindu Rajput family to parents from Uttarakhand. He is the youngest of three children of Pan Singh and Devaki Devi.
+    <br>
+    <br>
+   
+        
+        Previously Dhoni was the goalkeeper for his DAV Jawahar Vidya Mandir school's football team, but after seeing his goalkeeping skills, coach Keshav Ranjan Banerjee, one who inspired Dhoni to be a cricketer, picked him to play cricket for his school team. His exceptional wicketkeeping skills allowed him to become the regular wicketkeeper at the Commando Cricket Club (1995–1998). Based on his performance at club cricket, he was picked for the 1997/98 season Vinoo Mankad Trophy Under-16 Championship, where he performed well.
+
+From 2001 to 2003, Dhoni worked as a Travelling Ticket Examiner (TTE) at Kharagpur railway station under South Eastern Railway in Midnapore (W), a district in West Bengal.
+
+
+    </i>
+    <div class="photo">
+        
+        
+        <div class="p1"><img width="300px" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxfmhDgfr0cn0LNo85kfHjqT7_E_uc7QankA&usqp=CAU" alt=""></div>
+        <div class="p2"><img width="300px" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPFbVGLdcvg5F-yEPGtBzDAVGwGHhtBT1CPw&usqp=CAU" alt=""></div>
+        <div class="p3"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYWznt_4NtUw-BDcywMKO-l5LWHZeaUdzEiw&usqp=CAU" alt=""></div>
+        <div class="p4"><img  width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Z5_XGatzzTXNVzY2K9lIIWY0EJ5mDFZ8oQ&usqp=CAU" alt=""></div>
+        <div class="p5"><img    width="300px"
+        height="200px" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_President%2C_Shri_Ram_Nath_Kovind_presenting_the_Padma_Bhushan_Award_to_Shri_M.S._Dhoni%2C_at_the_Civil_Investiture_Ceremony-II%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_April_02%2C_2018.jpg" alt=""></div>
+        <div class="p0"><img width="300px" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTOyotJv-galE7x1je7O1WUye-34x6nhoGZQ&usqp=CAU" alt=""></div>
+        </div>
+        <br>
+        <div class="table">
+        <table border="2">
+            <tr>
+                <td> Full name </td>
+                <td>Mahendra singh dhoni</td>
+            </tr>
+            <tr>
+                <td> Born</td>
+                <td>7 july 1981</td>
+            </tr>
+            <tr>
+                <td> age </td>
+                <td> 42 </td>
+            </tr>
+            <tr>
+                <td> Nickname  </td>
+                <td>Mahi, Thala, MSD, Captain cool</td>
+            </tr>
+            <tr>
+                <td> batting </td>
+                <td> Right hand batsman </td>
+            </tr>
+            <tr>
+                <td> role </td>
+                <td> wicket-keeper batsman </td>
+            </tr>
+            <tr>
+                <td> wife </td>
+                <td> sakshi dhoni </td>
+            </tr>
+            <tr>
+                <td> daughter </td>
+                <td> jiva dhoni </td>
+            </tr>
+            
+            
+            
+            
+        </table>
+    </div>
+    </div>
+  </div>
+  <div class="menu" id=" #home" link="#home">
+   <div class="bharat">
+    <button onclick="b()"; onclick="stopAudio()"class="btn1">2</button>
+     <h2  onclick="a()" ; onclick="playAudio()"
+ >Career-life &#187;</h2> </div>
+      
+          <hr>
+  <div class="dhoni" id="dhoni" style="display:none">
+             <i>In the 1999–2000 Cooch Behar Trophy, the Bihar U-19 cricket team made it to the finals, where Dhoni's 84 helped Bihar post a total of 357.Nevertheless, Bihar's efforts were thwarted by Punjab's 839 with Dhoni's future teammate Yuvraj Singh making 358.Dhoni's contribution in the tournament included 488 runs (9 matches, 12 innings), 5 fifties, 17 catches and 7 stumpings. Dhoni made it to the East Zone U-19 squad for the CK Nayudu trophy in the 1999–2000 season but scored only 97 runs in four matches, as East Zone lost all four matches and finished last in the tournament.</i>
+             <br>
+             <i> He was recognised for his efforts in the 2003/04 season, especially in the One Day format and was picked for the India A squad for a tour of Zimbabwe and Kenya. Against the Zimbabwe XI in Harare Sports Club, Dhoni had his best wicket-keeping effort with 7 catches and 4 stumpings in the match. In the tri-nation tournament involving Kenya, India A and Pakistan A, Dhoni helped India A chase down their target of 223 against Pakistan A with a half-century. Continuing his good performance, he scored back to back centuries – 120 and 119* – against the same team. Dhoni scored 362 runs in 6 innings at an average of 72.40 and his performance in the series received attention from the then Indian captain – Sourav Ganguly and Ravi Shastri, amongst others.</i>
+             <br>
+             
+             <i> With Dhoni making a mark in the India A squad, he was picked in the ODI squad for the Bangladesh tour in 2004/05. Dhoni did not have a great start to his ODI career, getting run out for a duck on debut. In spite of an average series against Bangladesh, Dhoni was picked for the Pakistan ODI series. </i>
+             <br>
+             <p><h2 style="background-color:green;border:2px solid black;width:50vw;">&#9758;breakthrough </h2></p>
+             <i>In the second match of the series, Dhoni, in his fifth one-day international, scored 148 in Visakhapatnam off only 123 deliveries. Dhoni's 148 surpassed the earlier record for the highest score by an Indian wicket-keeper </i><br>
+             <i><b>in 2005, Sri Lanka had set India a target of 299 after a Kumar Sangakkara century and, in reply, India lost Tendulkar early. Dhoni was promoted to accelerate the scoring and ended the game with an unbeaten 183 off 145 balls, winning the game for India.</b></i>
+             <br>
+             <i>Due to his consistent ODI performances, Dhoni overtook Ricky Ponting as number one in the ICC ODI Rankings for batsmen on 20 April 2006, becoming the fastest batsman to do so, in 42 innings.</i>
+             <br>
+             <h2  style="background-color:red;border:2px solid black;width:70vw;"> &#9758;2007 ODI world cup</h2>
+             <i>India unexpectedly crashed out of the World Cup after losses to Bangladesh and Sri Lanka in the group stage. Dhoni was out for a duck in both these matches and scored just 29 runs in the tournament. After the loss to Bangladesh in 2007 Cricket World Cup, the house that Dhoni was constructing in his home-town Ranchi was vandalised and damaged by political activists of JMM. The local police arranged for security for his family</i>
+             <br>
+             <i><b>Dhoni had an excellent year in ODIs in 2009, scoring 1198 runs in just 24 innings, at considerably high average of 70.43. Dhoni was also the joint top-scorer in ODIs in 2009 along with Ricky Ponting, but the latter having played 30 innings. For his performances in 2009, he was named as captain and wicketkeeper of the World ODI XI by the ICC.</b></i>
+            <br>
+            <br>
+             <p><h2 style="background-color:aqua;border:2px solid black;width:70vw;">&#9758;2007 T20 world cup </h2></p>
+        <i> MS Dhoni was chosen to lead India in first-ever World T20 in 2007. He made his captaincy debut against Scotland but the match was washed off. Thereon, he led India to the ICC World Twenty 20 trophy in South Africa, with a victory over arch-rivals Pakistan in an intensely fought final on 24 September 2007. And India win his first WT20 tittle under Dhoni's captaincy.   </i>
+        <div class="photo">
+            <div class="p0"><iframe width="300" height="200" src="https://www.youtube.com/embed/IaUeGkHHDSM" title="India vs Pakistan icc T20 World Cup 2007 final last over" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="p0"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlxtJ52BdTm2k_tP27Sv_2a0cAi14Yf9A7EvZ4L61LvsbJibrc4OK-OR10&s=10" alt=""></div>
+            <div class="p1"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-L9thjUTnDQXcOlbSrEcaGhqJsG5ODkE5bXe2fviGGYXOvGBf4FduV14&s=10" alt=""></div>
+            <div class="p2"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUDNKiOag3JH1atSpDehYqCFibIPeJ-ciz6u0gfneYaFdv0FvXNxRZCuY&s=10" alt=""></div>
+            <div class="p3"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-5zPjNgXOrlDN9e-BMYcvQitImo3FmTAfXJGQUeN4VhD-S2jGZTc8pjB5&s=10" alt=""></div>
+            <div class="p4"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrjGJOFAX8opDFUf8m0wU08w0JcRn4rZbU49caDVSt3iQtU6A9w3zYsiX_&s=10" alt=""></div>
+            <div class="p5"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCjDsOG8B-I7xcWT7Sbh-T3SEh7NZqlKskY3A2Til89Q9ozg2jMO1AImY&s=10" alt=""></div>
+        </div>
+        <p><h2 style="background-color:pink ;border:2px solid black;width:70vw;">&#9758;2011 ODI world cup </h2></p>
+        <audio controls autoplay id="myAudio">
+  <source src="dhoni bcm.mp3.aac" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+        <i>The Indian cricket team achieved a historic victory in the 2011 ICC Cricket World Cup, held in India, Sri Lanka, and Bangladesh. It marked India's second World Cup triumph, with their first victory coming in 1983. <br>
+
+The 2011 Cricket World Cup final was held on April 2, 2011, at the Wankhede Stadium in Mumbai, India. The match was contested between India and Sri Lanka. Sri Lanka batted first and set a competitive target of 275 runs for India to win.
+<br>
+<br>
+India's chase got off to a shaky start as they lost their opening batsman, Virender Sehwag, early in the innings. However, Gautam Gambhir and the iconic Sachin Tendulkar steadied the ship with a crucial partnership. 
+
+When Gambhir departed after scoring a vital 97 runs, the responsibility fell on the shoulders of the captain, Mahendra Singh Dhoni. He promoted himself up the batting order and played a captain's innings under immense pressure.
+<br>
+<br>
+<b>with the match hanging in the balance, Dhoni took charge and played a match-winning knock. In the final over of the game, with India needing four runs to win, Dhoni smashed a magnificent six, etching his name in cricketing history. 
+
+Dhoni's unbeaten 91 off just 79 balls earned him the well-deserved title of Man of the Match. His leadership throughout the tournament was exemplary, and he played a vital role in guiding India to their second World Cup triumph.
+</b>
+
+</i>
+<div class="photo">
+    
+    <div class="p0">  "<iframe  width="300px"height="200px"  src="https://www.youtube.com/embed/R0alThHNb0Y" title="Dhoni finishes off in style!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen auto-play></iframe>"</div>
+    <div class="p1"><img width="200px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKPbCg3FzQXhEGQREi7Crl8qpL37v1LFAPcA&usqp=CAU" alt=""></div>
+    <div class="p2"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVMwsD9ttGv85PpN_ZTBTeIwpIBEN1mPnqEw&usqp=CAU" alt=""></div>
+    <div class="p3"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmGFM5rmC8AO-H7VnHRAJldbafSXRvRfKZtA&usqp=CAU" alt=""></div>
+    <div class="p4"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEmN6byHeTo6RjrTjkHJqOoDawHuNr62EvQ&usqp=CAU" alt=""></div>
+   <div class="p5"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTexiFo0yD_WB97Q3QcSOKgIGFIrEACjiItvw&usqp=CAU" alt=""></div>
+   <div class="p6"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMIq9PxjD1YjqQbgLl6AhFMp6Q7lMM9hmeXw&usqp=CAU" alt=""></div>
+        <div class="p7"><img width="300px"
+        height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgo2NhoBPep4Zlw_TD7fohhtHUOZH6VqGNkg&usqp=CAU" alt=""></div>
+    
+</div>
+    <br>
+    <p><h2 style="background-color:magenta ;border:2px solid black;width:80vw;">&#9758;2013 Champions trophy </h2></p>
+    <i>2013 champions trophy was held in England and wales.after 2003 india entered in champions trophy final.this time it will against the home team england.
+    <br>
+    after winning toss dhoni choose to bat first,but it was a rainy day ,and game will go delayed.finally according to DLS method the overs were reduced to 20 overs.
+    <br>
+    men in blue scored 129 runs after missing 7 wicket.This target considered a small target against England.But dhoni made this difficult target to that . 
+    <br>
+    <b>in the last over england have 15 runs to win .the last over would gave R Ashwin by dhoni.but ashwin gave only 9 runs from 5 balls and england want 6 runs from 1 ball but this ball is dot ball and india left the champions trophy 2013.</b>
+     </i>
+     <div class="photo">
+         <div class="p0"><iframe width="300px" height="200px" src="https://www.youtube.com/embed/tXYJ6ru9mF0" title="Wining Moments of Lucky Mahendra Singh Dhoni" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+         <div class="p0"><img width="300px" height="200px"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1WAEwUWyYqY09UX61zAb-dxkuUT0xDWUVVg&usqp=CAU" alt=""></div>
+     
+     <div class="p0"><img width="300px" height="200px"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnseyTDyp-TCuCM5_7eJjndbW0RmVRdS84JA&usqp=CAU" alt=""></div>
+     
+     <div class="p0"><img width="300px" height="200px"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHnX-HmyM5KJGbbRYS5ziBcG0-_4pXgG4Y1A&usqp=CAU" alt=""></div>
+     
+     <div class="p0"><img width="300px" height="200px"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-TYT1baLfKTK46wOtQklD9J6ktu07wFdwWQ&usqp=CAU" alt=""></div>
+     
+     <div class="p0"><img width="300px" height="200px"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm0LcUPha6abCFr_ueksnnWDFGVysR9seqNg&usqp=CAU" alt=""></div>
+     
+     <div class="p0"><img width="300px" height="200px"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3IhL4Q14z4141BWmWBwH9nIC1GRdw9sVLA&usqp=CAU" alt=""></div>
+     </div>
+     
+        
+         </div>
+  </div>
+  </div>
+  <div class="menu" id=" #home" link="#home">
+   <div class="bharat">
+    <button onclick="d()" class="btn1">3</button>
+     <h2  onclick="c()"  
+ >Career-statistics &#187;</h2> </div>
+      
+          <hr>
+  <div class="dhoni" id="ipl" style="display:none">
+      <table border="2"style="background:radial-gradient(aqua,#65ff00)">
+          <tr>
+              <td>competition </td>
+              <td>Test</td>
+              <td>ODI</td>
+              <td>T20I</td>
+              <td>T20</td>
+          </tr>
+          <tr>
+              <td>matches </td>
+              <td>90</td>
+              <td>350</td>
+              <td>98</td>
+              <td>361</td>
+          </tr>
+          <tr>
+              <td>run scored </td>
+              <td>4,876</td>
+              <td>10,773</td>
+              <td>1,617</td>
+              <td>7,167</td>
+          </tr>
+          <tr>
+              <td>batting average  </td>
+              <td>38.09</td>
+              <td>50.53</td>
+              <td>37.60</td>
+              <td>38.12</td>
+          </tr>
+          <tr>
+              <td>50s/100s </td>
+              <td>6/33</td>
+              <td>10/73</td>
+              <td>0/2</td>
+              <td>0/28</td>
+          </tr>
+          <tr>
+              <td>top score </td>
+              <td>224</td>
+              <td>183*</td>
+              <td>56</td>
+              <td>84*</td>
+          </tr>
+          <tr>
+              <td>catches/stumping </td>
+              <td>256/38</td>
+              <td>321/123</td>
+              <td>57/34</td>
+              <td>207/84</td>
+          </tr>
+          <tr>
+              <td>Best balling </td>
+              <td>-</td>
+              <td>1/14</td>
+              <td>-</td>
+              <td>-</td>
+          </tr>
+      </table>
+  </div>
+<div class="menu" id=" #home" link="#home">
+   <div class="bharat">
+    <button onclick="f()" class="btn1">4</button>
+     <h2  onclick="e()"  
+ >IPL-Career &#187;</h2> </div>
+      
+          <hr>
+  <div class="dhoni" id="ipl2" style="display:none">
+      <i>Dhoni was contracted by the Chennai Super Kings (CSK) for US$1.5 million. This made him the most expensive player in the IPL for the first season auctions. Under his captaincy,<b> CSK won the 2010, 2011, 2018, 2021 and the 2023 Indian Premier League titles and the 2010 and 2014 Champions League T20 titles and ended up as a runner-up in 2008, 2012, 2013, 2015 and 2019 IPL league seasons.</b>
+<br>
+<br>
+MS Dhoni became the first player to play 200 T20 matches for Super Kings. Dhoni is at the top of the list of most matches played in the Indian Premier League. Dhoni is also one of the three captains to have won the Indian Premier League twice, with CSK. Dhoni is the only captain in the IPL to win more than 100 matches. He is also the most successful wicket-keeper with 180 dismissals as of IPL 2023.
+<br>
+<br>
+csk is banned for 2016 and 2017 ipl, but this team come back in 2018 ipl and win their third tittle.
+ <table border="2" style="position:relative; left:100px">
+     <tr>
+         <td>year</td>
+         <td>position of csk</td>
+     </tr>
+     <tr>
+         <td>2008</td>
+         <td>Runners-up</td>
+     </tr>
+     <tr>
+         <td>2009</td>
+         <td> 5th position </td>
+     </tr>
+     <tr>
+         <td style="background-color:yellow; ">2010</td>
+         <td style="background-color:yellow; ">winner</td>
+     </tr>
+     <tr>
+         <td style="background-color:yellow; ">2011</td>
+         <td style="background-color:yellow; " >winner</td>
+     </tr>
+     <tr>
+         <td>2012</td>
+         <td>runners-up</td>
+     </tr>
+     <tr>
+         <td>2013</td>
+         <td>runners-up</td>
+     </tr>
+     <tr>
+         <td>2014</td>
+         <td>runners-up</td>
+     </tr>
+     <tr>
+         <td>2015</td>
+         <td>runners-up</td>
+     </tr>
+     <tr>
+         <td style="background-color:yellow; ">2018</td>
+         <td style="background-color:yellow; " >winner</td>
+     </tr>
+     <tr>
+         <td>2019</td>
+         <td>runners-up</td>
+     </tr>
+     <tr>
+         <td>2020</td>
+         <td>8th position </td>
+     </tr>
+     <tr>
+         <td style="background-color:yellow; " >2021</td>
+         <td style="background-color:yellow; ">winner</td>
+     </tr>
+     <tr>
+         <td>2022</td>
+         <td>10th position</td>
+     </tr>
+     <tr>
+         <td style="background-color:yellow; " >2023</td>
+         <td style="background-color:yellow; ">winner</td>
+     </tr>
+     
+     
+ </table>
+
+</i>
+<div class="photo">
+    <div class="p0"><iframe width="300px" height="200px" src="https://www.youtube.com/embed/k0IU4YZ8_zk" title="Sensational #CSK become TATA IPL 2023 champions | #CSKvGT | JioCinema" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGfhurCBrkz3yd7IbB80znw2O6DiirT9o_yg&usqp=CAU" alt=""></div>
+    <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThetmt_1luC65A1q2sCWaH6i2_5ljffd2L0g&usqp=CAU" alt=""></div>
+    <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQMu8C2WDLjKPHazacrN7yu2Sw8Jg1qG0aeA&usqp=CAU" alt=""></div>
+    <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj6I631qNRCjAzgl61E84TrrZ_ZnQzFIaWoA&usqp=CAU" alt=""></div>
+   <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNnoyOR2jf9Q-VMY6DBeOfShXZKYLuu9jlMw&usqp=CAU" alt=""></div>
+   <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdWhFluOr0qJ82CERlva9euM9s6KhjNIQc1Q&usqp=CAU" alt=""></div>
+    <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaCgcMnTKVdVQKTSIUw29neHP6Xd-PvSmIUQ&usqp=CAU" alt=""></div>
+   <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx14xl_U3ZqGOMteldPvnLnmD3dIl8zoRooA&usqp=CAU" alt=""></div>
+    <div class="p0"><img width="300px"height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk4aAwSgAGbWHq6yDiRBsQHNiWcIybh_2LFA&usqp=CAU " alt=""></div>
+    <div class="p0"><img width="300px" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUO_rS_KhTsWGx65U1wAnuY2U7fvcYZUJlvA&usqp=CAU" alt=""></div>
+    
+</div>
+      
+  </div>
+  <i><b style="border:2px solid red; position: relative;top:5px;">&hearts; Dhoni is the only captain to win all icc trophies.</b></i>
+  <br>
+  <br>
+  <p><h2 style="background-color:aqua;border:2px solid black;width:70vw;">&#9758;Other-trophies </h2></p>
+  <i>&#9758; Dhoni win Asia-Cup in 2010 and 2016.<div class="photo">
+  <div class="p0"><img width="300px" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8vcQB3U-3Q0Bdhpyf3LRmxzvoRYqAgLSeDA&usqp=CAU" alt="">
+  <p >2010</p>
+</div>
+  
+  <div class="p0"><img width="300px" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5fqXRRQrpUuKtFqQALYibS_cUW9rgA59JQ&usqp=CAU" alt="">
+  <p>2016</p></div>
+  </div>
+  <i>&#9758;<b>Dhoni lead the team india test team to the no.1 ranking,and win the icc test championship mace two times in 2009 and 2010.</b></i>
+  <div class="photo">
+      <div class="p0"><img width="300px" height="200px"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO-qwIiLKUDT3nIJnB6JX1grQ5MJG5KIppmQ&usqp=CAU" alt=""></div>
+      
+  </div>
+  <br>
+   <p><h2 style="background-color:aqua;border:2px solid black;width:90vw;">&#9758;Dhoni's unbeatable records</h2></p>
+  <h3>1)fastest stumping(in 0.08sec) all over world</h3><br>
+  <h3>2)150+ stumping in international cricket</h3><br>
+  <h3>3)He is the most successful captain in indian history.</h3>
+  
+</body>
+    <script src="index.js">
+        
+function z() {
+var color2 = document.getElementById('color').value;
+  document.body.style.backgroundColor =  color2;
+}
+function display(){
+    var element = document.getElementById("ms");
+element.style.display = "block";
+
+
+}
+function hide(){
+    var element = document.getElementById("ms");
+element.style.display = "none";
+
+
+}
+function a(){
+    var element = document.getElementById("dhoni");
+element.style.display = "block";
+
+
+}
+function b(){
+    var element = document.getElementById("dhoni");
+element.style.display = "none";
+}
+function c(){
+    var element = document.getElementById("ipl");
+element.style.display = "block";
+
+
+}
+function d(){
+    var element = document.getElementById("ipl");
+element.style.display = "none";
+}
+function e(){
+    var element = document.getElementById("ipl2");
+element.style.display = "block";
+
+
+}
+function f(){
+    var element = document.getElementById("ipl2");
+element.style.display = "none";
+}
+var audio = document.getElementById("myAudio"); 
+function toggleAudio() { 
+if (audio.paused) { 
+audio.play(); 
+} 
+else { audio.pause(); audio.currentTime = 0; 
+} 
+}
+
+var audio2 = document.getElementById("myAudio2");
+ function toggleAudio2() { 
+ if (audio2.paused)
+  { audio2.play(); 
+  }
+   else 
+   { audio2.pause(); audio2.currentTime = 0; 
+   } 
+   }
+
+var audio3 = document.getElementById("myAudio3");
+ function toggleAudio3() { 
+ if (audio3.paused)
+  { audio3.play(); 
+  }
+   else 
+   { audio3.pause(); audio3.currentTime = 0; 
+   } 
+   }
+
+               
+    </script>
+</html>
