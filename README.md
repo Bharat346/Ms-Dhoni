@@ -1,0 +1,3 @@
+# Ms-Dhoni
+This article is dedicated to ms dhoni . what to do for india , what is the role , and their achievements etc...
+I hope so you get impressed by it
